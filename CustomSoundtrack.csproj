@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>CustomSoundtrack</AssemblyName>
+    <Version>0.5.0</Version>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Tests/**/*.cs" />
+    <EmbeddedResource Include="Assets/FieldPlayerYellow.png" LogicalName="CustomSoundtrack.FieldPlayerYellow.png" />
+<EmbeddedResource Include="Assets/FieldPlayerBlue.png" LogicalName="CustomSoundtrack.FieldPlayerBlue.png" />
+<EmbeddedResource Include="Assets/FieldPlayerRed.png" LogicalName="CustomSoundtrack.FieldPlayerRed.png" />
+<EmbeddedResource Include="Assets/FieldPlayerGreen.png" LogicalName="CustomSoundtrack.FieldPlayerGreen.png" />
+<EmbeddedResource Include="Assets/FieldPlayerBlack.png" LogicalName="CustomSoundtrack.FieldPlayerBlack.png" />
+<EmbeddedResource Include="Assets/FieldPlayerWhite.png" LogicalName="CustomSoundtrack.FieldPlayerWhite.png" />
+    <Reference Include="BepInEx"><HintPath>$(SptRoot)/BepInEx/core/BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(SptRoot)/BepInEx/core/0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(SptRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(SptRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(SptRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.InputLegacyModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(SptRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.IMGUIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(SptRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.ImageConversionModule"><HintPath>$(SptRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.ImageConversionModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.AudioModule"><HintPath>$(SptRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.AudioModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule"><HintPath>$(SptRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.UnityWebRequestModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule"><HintPath>$(SptRoot)/EscapeFromTarkov_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+  <Target Name="CheckSpt" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(SptRoot)/BepInEx/core/BepInEx.dll')" Text="Set SptRoot to your SPT game directory using Build.ps1." />
+  </Target>
+</Project>
