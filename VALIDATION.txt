@@ -1,0 +1,28 @@
+Custom Soundtrack 0.5.0 validation
+
+Compiled with .NET SDK 10.0.404, targeting netstandard2.1.
+Reference assemblies: BepInEx BaseLib 5.4.20, HarmonyX 2.10.1, UnityEngine.Modules 2022.3.43.
+These references are NOT included in the package.
+Supplied SPT Assembly-CSharp and Fika 2.4.6 were inspected for compatibility; no game runtime was executed.
+PowerShell installer/migration tests were not executed on this Linux host. The -Test build option runs them on Windows.
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CustomSoundtrack -> /workspace/scratch/ec8a23a32d31/CustomSoundtrack_0.5.0_AudioControls/bin/Release/netstandard2.1/CustomSoundtrack.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.40
+
+PASS: 175 new assertions: combat returns, menu override/outcome persistence, silence, death probabilities, filter direction and MP3.
+PASS: combat override matrix, category switches, boss death chance, seek boundaries.
+PASS: valid PCM, placeholder sizes, truncation and format alignment.
+PASS: fade timing/reversal, instant combat, outcome persistence/timers and trigger policy.
+PASS: late joins, same-time requests, rollover, long absence, early completion, invalid durations and 10,000 native-delay events, sequential/shuffle history, restart/previous and single-track navigation, duplicate finish suppression, switch-off/skip cancellation and early-timer deferral, invalid/never-started completion rejection and failed-navigation rollback.
+PASS: player selection/wrapping/search/time/progress and existing combat priority.
+PASS: 20034 assertions: priority, pause/stop, combat extension/manual resume, hideout exclusion, duplicate outcomes, world disposal and repeated raids.
+
+All 43 C# source files passed syntax parsing; project XML parsed.
+Runtime checks remain: Configuration Manager presentation, environment hooks, Fika voice replication, corpse equipment tracking, MP3 codec behaviour and Unity spatial filtering.
