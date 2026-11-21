@@ -1,6 +1,6 @@
-# Custom Soundtrack 0.5.0 — audio controls test build
+# Custom Soundtrack 0.5.0
 
-For SPT 4.1.6 and testing with Fika 2.4.6. This is a test release, not an in-game-verified release. Settings marked `***` need your testing.
+For SPT 4.1.6 and testing with Fika 2.4.6. Settings marked `***` need testing.
 
 ## Install the compiled test build
 
@@ -94,7 +94,7 @@ Enable Boss Music, then enable the desired bosses. Playback remains local to eac
 - Smoothing controls how quickly the filter follows changes. These are artistic starting points, not physical helmet measurements.
 - **Stop When Helmet Looted** stops music or static once the dead boss's tracked original headwear leaves its slot. It overrides the chosen death behaviour and stays stopped for that corpse. Bosses without tracked headwear are unaffected. Test both local and teammate looting.
 
-## Environmental controls ***
+## Environmental controls
 
 Off by default. Enable **Environment** after removing the separate EnvironmentVolumeControl plugin.
 
@@ -102,7 +102,7 @@ Sliders adjust native **rain/precipitation, wind, BTR movement, airdrop aircraft
 
 These are volume controls, not replacement sound packs. Separate bird/animal/map ambience, breathing, searching and medkit replacements are not implemented in this test. Snow/blizzard coverage through the precipitation/wind system needs verification; there is no independently verified blizzard hook yet.
 
-## Automatic injury speech ***
+## Automatic injury speech
 
 Off by default. Enable **Injury Speech**, then choose Light Bleed, Heavy Bleed, Fracture and Blacked Limb.
 
